@@ -1,11 +1,15 @@
 import React from 'react';
 import useMemeGenerator from '../hooks/useMemeGenerator';
 import Image from 'next/image'
-
+import Head from 'next/head';
 const Home: React.FC = () => {
   const { randomMeme, generateRandomMeme } = useMemeGenerator();
 
   return (
+    <>
+    <Head>
+        <title>Meme template generator - Mishat</title>
+       </Head>
     <div className="min-h-screen flex items-center px-6 justify-center bg-gray-800">
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-4">Meme Template Generator</h1>
@@ -29,6 +33,7 @@ const Home: React.FC = () => {
         </button>
       </div>
     </div>
+    </>
   );
 };
 
