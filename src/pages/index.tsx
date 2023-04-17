@@ -8,7 +8,8 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center px-6 justify-center bg-gray-800">
       <div className="text-center">
-        <h1 className="text-4xl mb-4">Developer Meme Generator</h1>
+        <h1 className="text-4xl font-bold mb-4">Meme Template Generator</h1>
+        <div className='max-w-4xl flex items-center justify-center'>        
         {randomMeme && (
           <Image
             src={randomMeme.url}
@@ -18,6 +19,8 @@ const Home: React.FC = () => {
             height={randomMeme.height}
           />
         )}
+        </div>
+
         <button
           className="bg-blue-500 text-white px-4 py-2 rounded"
           onClick={generateRandomMeme}
